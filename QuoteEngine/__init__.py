@@ -1,3 +1,5 @@
+"""Initialization file for the QuoteEngine Module"""
+
 from .DocxImporter import DocxImporter
 from .CSVImporter import CSVImporter
 from .Ingestor import Ingestor

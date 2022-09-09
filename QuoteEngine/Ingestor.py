@@ -1,3 +1,5 @@
+"""Abstract module for parsing quote inputs"""
+
 from typing import List
 
 from .ImportInterface import ImportInterface

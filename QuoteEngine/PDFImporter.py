@@ -1,3 +1,5 @@
+"""Imports quotes in PDF format and converts to QuoteEngine objects"""
+
 from typing import List
 import subprocess
 import os
@@ -6,11 +8,14 @@ import random
 from .ImportInterface import ImportInterface
 from .QuoteModel import QuoteModel
 
+
 class PDFImporter(ImportInterface):
     allowed_extensions = ['pdf']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Parses input data and converts to quote objects"""
+
         if not cls.can_ingest(path):
             raise Exception('Cannot Ingest Exception')
 

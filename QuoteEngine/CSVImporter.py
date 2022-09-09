@@ -1,14 +1,19 @@
+"""Imports quotes in CSV format and converts to QuoteEngine objects"""
+
 from typing import List
 import pandas
 
 from .ImportInterface import ImportInterface
 from .QuoteModel import QuoteModel
 
+
 class CSVImporter(ImportInterface):
     allowed_extensions = ['csv']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Parses input data and converts to quote objects"""
+
         if not cls.can_ingest(path):
             raise Exception('cannot ingest exception')
 

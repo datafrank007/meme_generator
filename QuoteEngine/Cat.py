@@ -1,3 +1,5 @@
+"""Whoops! This shouldn't be in here, I hope to delete it soon."""
+
 class Cat():
     def __init__(self, name, age, isIndoor=True):
         self.name = name
